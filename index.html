@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CineTrack</title>
+    <script src="CineTrack.js"></script>
+    <link rel="stylesheet" href="CineTrack.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Navigation Section -->
+        <div class="left">
+            <p>CineTrack</p>
+            <div class="flow home" id="home-btn">
+                <span class="material-icons">home</span>
+                <h2>Home</h2>
+            </div>
+            <div class="flow" id="movies-btn">
+                <span class="material-icons">movie_filter</span>
+                <h2>Movies</h2>
+            </div>
+            <div class="flow" id="tvshows-btn">
+                <span class="material-icons">tv</span>
+                <h2>TV Shows</h2>
+            </div>
+        </div>
+    
+        <!-- Right Content Section -->
+        <div class="right">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for Movies or TV shows...">
+                <button id="search-btn">Search</button>                
+            </div>
+
+            <!-- Error Container -->
+            <div id="error-container" style="display: none; color: red; margin-top: 10px;"></div>
+            
+            <!-- Featured Section -->
+            <div class="featured">
+                <h1>Featured Movie</h1>
+                <div class="featured-content">
+                    <div class="img-container">
+                        <img id="featured-movie-image" src="" alt="Featured Movie Image">
+                    </div>
+                    <div class="info-container">
+                        <h2 id="featured-title">Loading...</h2>
+                        <div class="rating">
+                            <div class="btn">
+                                <span class="material-icons">movie_filter</span>
+                                <span id="featured-release-year"></span>
+                            </div>
+                            <div class="btn">
+                                <span class="material-icons star">star</span>
+                                <span id="featured-rating">0</span>
+                            </div>
+                        </div>
+                        <p id="featured-genres">Genres: Loading...</p>
+                        <p id="featured-description">Loading description...</p>
+                        <a href="#" id="featured-more-info" class="btn btn-main">Read more</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Trending Section -->
+            <div class="trending-movies-tvshows">
+                <!-- Trending Movies -->
+                <div class="trending">
+                    <div class="heading-with-link">
+                        <h1>Trending Movies</h1>
+                        <a id="see-all-movies" class="see-all">See All</a>
+                    </div>
+                    <div class="movie-container" id="movie-container">
+                        <div class="list" style="background-image: url('movie_image_url');">
+                            <div class="rating-overlay">
+                                <span class="material-icons" style="font-size: 30px; color: gold;">star</span>
+                                <span>${movie.vote_average || 'N/A'}</span> 
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending TV Shows -->
+                <div class="trending">
+                    <div class="heading-with-link">
+                        <h1>Trending TV Shows</h1>
+                        <a id="see-all-tvshows" class="see-all">See All</a>
+                    </div>
+                    <div class="tv-show-container" id="tv-show-container">
+                        <div class="list" style="background-image: url('tv_show_image_url');">
+                            <div class="rating-overlay">
+                                <span class="material-icons" style="font-size: 30px; color: gold;">star</span>
+                                <span>${movie.vote_average || 'N/A'}</span> 
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

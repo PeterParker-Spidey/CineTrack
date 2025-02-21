@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>CineTrack - TV Show Details</title>
+  <script src="Show-Card.js"></script>
+  <link rel="stylesheet" href="Show-Card.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Navigation Section -->
+    <div class="left">
+      <p>CineTrack</p>
+      <div class="flow home" id="home-btn">
+        <span class="material-icons">home</span>
+        <h2>Home</h2>
+      </div>
+      <div class="flow" id="movies-btn">
+        <span class="material-icons">movie_filter</span>
+        <h2>Movies</h2>
+      </div>
+      <div class="flow" id="tvshows-btn">
+        <span class="material-icons">tv</span>
+        <h2>TV Shows</h2>
+      </div>
+    </div>
+
+    <!-- Right Content Section -->
+    <div class="right">
+      <img id="showPoster" class="show-poster" src="" alt="Show Poster">
+
+      <div class="watchlist"></div>
+
+      <!-- Watchlist Section -->
+      <div class="streaming-section">
+        <h3>Available on</h3>
+        <div id="streamingPlatforms" class="streaming-platforms"></div>
+      </div>
+
+      <!-- TV Show Details Section -->
+      <div class="show">
+        <div class="show-title" id="showTitle">Title</div>
+        <div class="show-release-year" id="showReleaseYear">Year</div>
+        <div class="show-genres" id="showGenres">Genres</div>
+        <div class="show-rating" id="showRating">Rating</div>
+        <div class="show-overview" id="showOverview">Overview</div>
+      </div>
+
+      <!-- Trailer Section -->
+      <div class="trailer" id="trailerContainer">
+        <iframe id="trailer" width="560" height="315" frameborder="0" allowfullscreen title="TV Show Trailer">
+        </iframe>
+      </div>
+
+      <!-- Cast Section -->
+      <div class="cast-section">
+        <h3>Cast</h3>
+        <div id="castContainer" class="cast-container"></div>
+        <div class="scroll-arrows">
+          <button id="prevArrow" onclick="scrollCast('left')" class="arrow-btn">
+            <span class="material-icons">keyboard_arrow_left</span>
+          </button>
+          <button id="nextArrow" onclick="scrollCast('right')" class="arrow-btn">
+            <span class="material-icons">keyboard_arrow_right</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="reviews-section">
+        <h3>Reviews</h3>
+        <div id="reviewsContainer" class="reviews-container"></div>
+        <div class="scroll-arrows">
+          <button id="prevArrow" onclick="scrollReviews('left')" class="arrow-btn">
+            <span class="material-icons">keyboard_arrow_left</span>
+          </button>
+          <button id="nextArrow" onclick="scrollReviews('right')" class="arrow-btn">
+            <span class="material-icons">keyboard_arrow_right</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Comments Section -->
+      <div class="comments">
+        <h3>Comments</h3>
+        <textarea id="commentInput" placeholder="Leave a comment"></textarea>
+        <button onclick="submitComment()">Submit</button>
+        <ul id="commentList"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

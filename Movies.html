@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CineTrack - Movies</title>
+    <script src="Movies.js"></script>
+    <link rel="stylesheet" href="Movies.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Navigation Section -->
+        <div class="left">
+            <p>CineTrack</p>
+            <div class="flow home" id="home-btn">
+                <span class="material-icons">home</span>
+                <h2>Home</h2>
+            </div>
+            <div class="flow" id="movies-btn">
+                <span class="material-icons">movie_filter</span>
+                <h2>Movies</h2>
+            </div>
+            <div class="flow" id="tvshows-btn">
+                <span class="material-icons">tv</span>
+                <h2>TV Shows</h2>
+            </div>
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="right">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search Movies...">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <!-- All Movies Section -->
+            <div class="heading">
+                <h1>All Movies</h1>
+                <div id="movie-container">
+                    <div class="rating-overlay">
+                        <span class="material-icons" style="font-size: 30px; color: gold;">star</span>
+                    </div>
+                </div>
+                <div id="pagination-container" class="pagination">
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
